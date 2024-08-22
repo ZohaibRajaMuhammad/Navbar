@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background-color: #E79f9f;
+        }
+
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border-radius: 15px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 100;
+        }
+
+        .logo img {
+          width: 50px;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+        }
+
+        .nav-links li {
+          margin-left: 20px;
+          position: relative;
+        }
+
+        .nav-links a {
+          text-decoration: none;
+          color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+
+        .nav-links a.active, .nav-links a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          min-width: 150px;
+          z-index: 100;
+        }
+
+        .dropdown-content a {
+          color: #000;
+          padding: 10px;
+          display: block;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .login-signup a {
+          background-color: #4caf50;
+          color: #black;
+          padding: 10px 20px;
+          border-radius: 20px;
+          transition: background-color 0.3s;
+        }
+
+        .login-signup a:hover {
+          background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="WhatsApp Image 2024-07-22 at 14.51.43_c03f1622.jpg" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Products</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Product 1</a></li>
+                    <li><a href="#">Product 2</a></li>
+                    <li><a href="#">Product 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="login-signup"><a href="#">Login / Sign Up</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
